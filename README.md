@@ -7,6 +7,7 @@ The simple-llm-app-fastapi-langchain project is designed to provide a basic stru
 The following endpoints are available:
 - **GET /health**: Returns a health check response.
 - **GET /healthsecond**: Returns a secondary health check response.
+- **GET /healththird**: Returns a tertiary health check response.
 - **POST /ingest**: Ingests documents into FAISS.
 
 ## Usage
