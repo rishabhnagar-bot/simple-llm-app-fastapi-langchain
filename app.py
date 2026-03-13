@@ -84,6 +84,10 @@ async def health():
 async def health():
     return {"status": "healthy second time too"}
 
+@app.get("/healththird", summary="Health check third endpoint")
+async def health():
+    return {"status": "healthy third time too"}
+
 # ── Routes ──────────────────────────────────────────────────────────
 @app.post("/ingest", summary="Ingest documents into FAISS")
 async def ingest(req: IngestRequest):
