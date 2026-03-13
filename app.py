@@ -76,6 +76,11 @@ class ChatResponse(BaseModel):
     sources: list[str]
 
 
+@app.get("/health", summary="Health check")
+async def health():
+    return {"status": "healthy"}
+
+
 # ── Routes ──────────────────────────────────────────────────────────
 @app.post("/ingest", summary="Ingest documents into FAISS")
 async def ingest(req: IngestRequest):
