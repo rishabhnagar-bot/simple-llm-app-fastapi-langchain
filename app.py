@@ -80,6 +80,9 @@ class ChatResponse(BaseModel):
 async def health():
     return {"status": "healthy"}
 
+@app.get("/healthsecond", summary="Health check second endpoint")
+async def health():
+    return {"status": "healthy second time too"}
 
 # ── Routes ──────────────────────────────────────────────────────────
 @app.post("/ingest", summary="Ingest documents into FAISS")
